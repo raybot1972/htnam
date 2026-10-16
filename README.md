@@ -10,7 +10,7 @@ The preferred editing route is the visual dashboard at `/admin/`. On the
 first visit, create a password of at least 12 characters. The password is
 stored only as a secure hash in `config.local.php`; that file is excluded from
 Git. The dashboard edits homepage, service, product, project, client-story,
-value, footer, contact, maintenance, and image content. Pressing **Save &
+value, footer, contact, maintenance, team profile, and image content. Pressing **Save &
 publish** updates the public site immediately and keeps the ten newest JSON
 backups in `content/backups/`.
 
@@ -37,6 +37,8 @@ The approved full logo and slogan are stored in
 `images/htit-brand-lockup-v2.png`. The simplified header logo is stored in
 `images/htit-header-logo-v1.png`. Dashboard uploads are validated PNG, JPG, or
 WebP files of up to 5 MB and are stored in `images/uploads/`.
+The homepage team mosaic uses the four editable profiles under the dashboard's
+**Team** section; each portrait, name, and role can be replaced independently.
 
 ## Maintenance mode
 

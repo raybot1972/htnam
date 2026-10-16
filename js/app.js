@@ -16,9 +16,15 @@ const HOME_CONTENT = Object.assign({
   intro: "We are an engineering and AI solutions partner founded on righteousness, radical honesty, and uncompromising craftsmanship. Delivering high-impact software through authentic human connection.",
   primaryCta: "Consult with Our Team",
   secondaryCta: "Explore Our Work",
-  teamTitle: "The HTIT Collective",
-  teamSubtitle: "Senior Engineers • AI Ethicists",
-  teamStatus: "Active Support",
+  teamTitle: "The HTIT Team",
+  teamSubtitle: "Finance • Visualization • Development • Architecture",
+  teamStatus: "Available for Collaboration",
+  teamMembers: [
+    { name: "Manny", role: "Back Office & Finance", image: "images/team/manny.jpeg" },
+    { name: "Mondo", role: "Visualization & Development", image: "images/team/mondo.jpeg" },
+    { name: "JoJo", role: "Development & Automation", image: "images/team/jojo.jpeg" },
+    { name: "Raymond", role: "Software Solutions Architect", image: "images/team/raymond.jpeg" }
+  ],
   metrics: [
     { value: "100%", label: "Auditable Code" },
     { value: "0 hrs", label: "Hidden Debt" },
@@ -415,8 +421,17 @@ function renderHome() {
       </div>
       <div class="photo">
         <div class="photo-frame">
-          <img src="${TEAM_IMG_URL}" alt="HTIT Engineering & AI Advisory Team" />
-          <div class="photo-shade"></div>
+          <div class="team-mosaic" aria-label="HTIT team">
+            ${(Array.isArray(HOME_CONTENT.teamMembers) && HOME_CONTENT.teamMembers.length ? HOME_CONTENT.teamMembers : [{ name: HOME_CONTENT.teamTitle, role: HOME_CONTENT.teamSubtitle, image: TEAM_IMG_URL }]).slice(0, 4).map((member) => `
+              <article class="team-person">
+                <img src="${esc(member.image || TEAM_IMG_URL)}" alt="${esc(member.name || "HTIT team member")}" />
+                <div class="team-person-copy">
+                  <strong>${esc(member.name || "HTIT Team")}</strong>
+                  <span>${esc(member.role || "")}</span>
+                </div>
+              </article>
+            `).join("")}
+          </div>
           <div class="photo-badge">
             <div class="row">
               <div class="icon-round tone-cyan">${icon("groups", 20)}</div>

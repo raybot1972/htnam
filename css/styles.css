@@ -190,19 +190,41 @@ h3 { font-size: 1.35rem; font-weight: 700; }
   padding: 6px;
   box-shadow: var(--shadow);
 }
-.photo img { width: 100%; border-radius: 14px; object-fit: cover; transition: transform .7s ease; }
-.photo:hover img { transform: scale(1.04); }
-.photo-frame { position: relative; overflow: hidden; border-radius: 14px; }
-.photo-shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,14,27,.95), transparent 55%); }
-.photo-badge {
+.photo-frame { overflow: hidden; border-radius: 14px; background: var(--deep); }
+.team-mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  aspect-ratio: 1 / 1;
+  background: rgba(0,210,255,.14);
+}
+.team-person { position: relative; min-width: 0; overflow: hidden; background: var(--deep); }
+.team-person img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  transition: transform .6s ease, filter .6s ease;
+}
+.team-person:hover img { transform: scale(1.045); filter: brightness(1.08); }
+.team-person-copy {
   position: absolute;
-  left: 14px; right: 14px; bottom: 14px;
+  inset: auto 0 0;
+  min-height: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 34px 11px 10px;
+  background: linear-gradient(to top, rgba(4,8,18,.96), rgba(4,8,18,.04));
+}
+.team-person-copy strong { font-family: "Space Grotesk", sans-serif; font-size: 14px; color: white; }
+.team-person-copy span { font-family: "JetBrains Mono", monospace; font-size: 9px; line-height: 1.35; color: var(--cyan-2); text-transform: uppercase; letter-spacing: .04em; }
+.photo-badge {
   display: flex; justify-content: space-between; align-items: center; gap: 10px;
   padding: 12px;
-  border-radius: 14px;
+  margin-top: 4px;
   background: rgba(38,41,56,.92);
-  border: 1px solid rgba(0,210,255,.2);
-  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0,210,255,.2);
 }
 .avatar, .icon-box {
   width: 44px; height: 44px; border-radius: 12px;

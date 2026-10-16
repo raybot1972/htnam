@@ -223,6 +223,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $content['home']['metrics'][$index]['value'] = clipped($_POST['metrics'][$index]['value'] ?? '', 40);
             $content['home']['metrics'][$index]['label'] = clipped($_POST['metrics'][$index]['label'] ?? '', 80);
         }
+        foreach ($content['home']['teamMembers'] ?? [] as $index => &$member) {
+            $member['name'] = clipped($_POST['teamMembers'][$index]['name'] ?? $member['name'] ?? '', 80);
+            $member['role'] = clipped($_POST['teamMembers'][$index]['role'] ?? $member['role'] ?? '', 140);
+        }
+        unset($member);
         foreach ([
             'summary' => 800, 'pledge' => 1000, 'primaryOffice' => 120, 'primaryAddress' => 300,
             'secondaryOffice' => 120, 'secondaryAddress' => 300, 'email' => 180, 'phone' => 80,
@@ -260,6 +265,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $content['assets'][$assetKey] = $uploadedPath;
                 }
             }
+            foreach ($content['home']['teamMembers'] ?? [] as $index => &$member) {
+                $uploadedPath = upload_asset('upload_team_' . $index, 'team-' . ($index + 1), $uploadDirectory);
+                if ($uploadedPath !== null) {
+                    $member['image'] = $uploadedPath;
+                }
+            }
+            unset($member);
             if (save_content($contentFile, $content, $backupDirectory)) {
                 flash('success', 'Changes saved and published to the live website.');
             } else {
@@ -284,7 +296,8 @@ $content = load_content($contentFile);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTIT Site Manager</title>
     <meta name="robots" content="noindex,nofollow,noarchive" />
-    <link rel="stylesheet" href="admin.css?v=20261015a" />
+    <link rel="stylesheet" href="admin.css?v=20261016a" />
+    <link rel="stylesheet" href="team.css?v=20261016a" />
 </head>
 <body class="<?= $authenticated ? 'is-dashboard' : 'is-auth' ?>">
 <?php if (!$authenticated): ?>
@@ -322,7 +335,7 @@ $content = load_content($contentFile);
         <aside class="sidebar">
             <p class="eyebrow">Content</p>
             <nav>
-                <a href="#dashboard">Overview</a><a href="#homepage">Homepage</a><a href="#branding">Branding & images</a>
+                <a href="#dashboard">Overview</a><a href="#homepage">Homepage</a><a href="#team">Team</a><a href="#branding">Branding & images</a>
                 <a href="#services">Services</a><a href="#products">Products</a><a href="#projects">Projects</a>
                 <a href="#stories">Client stories</a><a href="#values">Values</a><a href="#footer">Footer & contact</a>
             </nav>
@@ -373,10 +386,27 @@ $content = load_content($contentFile);
                     </div>
                 </section>
 
+                <section class="panel" id="team">
+                    <div class="section-heading"><p class="eyebrow">Team</p><h2>People and roles</h2><p class="muted">Edit each name or role, or replace a portrait with a PNG, JPG, or WebP up to 5 MB.</p></div>
+                    <div class="team-editor-grid">
+                    <?php foreach (array_slice($content['home']['teamMembers'] ?? [], 0, 4) as $index => $member): ?>
+                        <article class="asset-card team-editor-card">
+                            <div class="asset-preview team-preview"><img src="../<?= h($member['image'] ?? '') ?>" alt="<?= h($member['name'] ?? 'Team member') ?> portrait preview" data-preview="team_<?= $index ?>" /></div>
+                            <div class="team-fields">
+                                <?= field("teamMembers[$index][name]", 'Name', $member['name'] ?? '') ?>
+                                <?= field("teamMembers[$index][role]", 'Role', $member['role'] ?? '') ?>
+                            </div>
+                            <p class="tiny path"><?= h($member['image'] ?? '') ?></p>
+                            <label class="upload"><span>Choose replacement portrait</span><input type="file" name="upload_team_<?= $index ?>" accept="image/png,image/jpeg,image/webp" data-upload="team_<?= $index ?>" /></label>
+                        </article>
+                    <?php endforeach; ?>
+                    </div>
+                </section>
+
                 <section class="panel" id="branding">
-                    <div class="section-heading"><p class="eyebrow">Branding</p><h2>Logos and team image</h2><p class="muted">Upload a PNG, JPG, or WebP up to 5 MB. Existing files are retained for rollback.</p></div>
+                    <div class="section-heading"><p class="eyebrow">Branding</p><h2>Logos and fallback image</h2><p class="muted">Upload a PNG, JPG, or WebP up to 5 MB. Existing files are retained for rollback.</p></div>
                     <div class="asset-grid">
-                    <?php foreach (['headerLogo' => 'Header logo', 'brandLogo' => 'Full brand lockup', 'teamImage' => 'Team photograph'] as $key => $label): ?>
+                    <?php foreach (['headerLogo' => 'Header logo', 'brandLogo' => 'Full brand lockup', 'teamImage' => 'Legacy team fallback'] as $key => $label): ?>
                         <article class="asset-card">
                             <div class="asset-preview"><img src="../<?= h($content['assets'][$key] ?? '') ?>" alt="<?= h($label) ?> preview" data-preview="<?= h($key) ?>" /></div>
                             <h3><?= h($label) ?></h3><p class="tiny path"><?= h($content['assets'][$key] ?? '') ?></p>
@@ -415,7 +445,7 @@ $content = load_content($contentFile);
             </form>
         </main>
     </div>
-    <script src="admin.js?v=20261015a"></script>
+    <script src="admin.js?v=20261016a"></script>
 <?php endif; ?>
 </body>
 </html>
