@@ -1,0 +1,205 @@
+{
+    "settings": {
+        "maintenanceMode": false
+    },
+    "site": {
+        "title": "HTIT — Where People Meet Technology",
+        "metaDescription": "Engineering and AI solutions partner founded on righteousness, radical honesty, and uncompromising craftsmanship.",
+        "consultLabel": "Consult with Us"
+    },
+    "assets": {
+        "brandLogo": "images/htit-brand-lockup-v2.png",
+        "headerLogo": "images/htit-header-logo-v1.png",
+        "teamImage": "images/htit-team.jpg"
+    },
+    "home": {
+        "badge": "Human-Centered Tech Innovation & Integrity",
+        "headlineBefore": "Human-Centred",
+        "headlineAccent": "Technology",
+        "headlineAfter": ", Built the Right Way.",
+        "intro": "We are an engineering and AI solutions partner founded on righteousness, radical honesty, and uncompromising craftsmanship. Delivering high-impact software through authentic human connection.",
+        "primaryCta": "Consult with Our Team",
+        "secondaryCta": "Explore Our Work",
+        "teamTitle": "The HTIT Collective",
+        "teamSubtitle": "Senior Engineers • AI Ethicists",
+        "teamStatus": "Active Support",
+        "metrics": [
+            {
+                "value": "100%",
+                "label": "Auditable Code"
+            },
+            {
+                "value": "0 hrs",
+                "label": "Hidden Debt"
+            },
+            {
+                "value": "99.9%",
+                "label": "Uptime Reliability"
+            }
+        ]
+    },
+    "footer": {
+        "summary": "Pioneering human-centric cognitive architecture, ethical enterprise systems, and cybernetic precision. We bridge high-velocity computation with moral clarity.",
+        "pledge": "All algorithmic systems deployed under HTIT stewardship adhere strictly to auditable transparency, user agency, and humane technical safety benchmarks.",
+        "primaryOffice": "Silicon Gateway",
+        "primaryAddress": "Cybernetic Nexus Tower, Ste 400\r\nSilicon Gateway, CA 94025",
+        "secondaryOffice": "EMEA Innovation Lab",
+        "secondaryAddress": "Koningin Wilhelminaplein\r\nAmsterdam, Netherlands",
+        "email": "telemetry@htit-global.internal",
+        "phone": "+1 (800) 484-8324"
+    },
+    "services": [
+        {
+            "id": "full-stack",
+            "title": "Full-Stack Development",
+            "tagCategory": "Core Engine",
+            "description": "From resilient reactive frontends to distributed multi-tenant backends. High-performance asynchronous microservices engineered with clean architectures and automated regression shields."
+        },
+        {
+            "id": "ai-integration",
+            "title": "AI Integration",
+            "tagCategory": "Intelligence",
+            "description": "Autonomous cognitive agents, real-time retrieval-augmented pipelines (RAG), embeddings, and custom domain-tuned models with guardrails."
+        },
+        {
+            "id": "ai-assisted-dev",
+            "title": "AI-Assisted Dev",
+            "tagCategory": "Velocity",
+            "description": "Accelerated agile delivery combining machine-generated scaffolding with rigorous human peer validation, cutting lead times in half."
+        },
+        {
+            "id": "system-integration",
+            "title": "System Integration",
+            "tagCategory": "Synergy",
+            "description": "Secure enterprise bridges, asynchronous event queues, robust ETL protocols, and micro-orchestration across legacy and cloud apps."
+        },
+        {
+            "id": "automated-environments",
+            "title": "Automated Environments",
+            "tagCategory": "DevOps",
+            "description": "Zero-friction CI/CD deployment pipelines, automated canary releases, Infrastructure as Code, and resilient self-healing serverless clusters."
+        },
+        {
+            "id": "new-system-dev",
+            "title": "New System Dev",
+            "tagCategory": "Greenfield",
+            "description": "Zero-to-one product development: conceptual validation, interactive prototyping, and rapid MVP maturation into enterprise flagships."
+        },
+        {
+            "id": "maintenance-improvement",
+            "title": "Maintenance & Improvement",
+            "tagCategory": "Evolution",
+            "description": "Proactive system health sweeps, database query indexing, memory leak remedies, 24/7 SLA escalation desks, and systematic monolith de-coupling."
+        }
+    ],
+    "products": [
+        {
+            "id": "pulseflow-ai",
+            "title": "PulseFlow AI",
+            "tag": "Active Suite v2.4",
+            "status": "Production Ready",
+            "shortDesc": "Enterprise workflow orchestration framework embedding mandatory human-in-the-loop audit checkpoints for mission-critical decisions.",
+            "fullDesc": "PulseFlow AI is our proprietary orchestration framework engineered for regulated industries. Rather than allowing generative models to act unchecked, PulseFlow enforces strict confidence thresholding, semantic boundary checking, and mandatory human sign-off for critical financial, legal, or clinical decisions."
+        },
+        {
+            "id": "nexusbridge",
+            "title": "NexusBridge",
+            "tag": "Sync Engine v3.1",
+            "status": "Ultra Low Latency",
+            "shortDesc": "Secure enterprise data connector delivering ultra-low-latency real-time bidirectional synchronization across disparate software silos.",
+            "fullDesc": "NexusBridge breaks down enterprise data silos without requiring costly database migrations. Operating over custom streaming protocols, it synchronizes legacy ERPs, relational databases, cloud microservices, and CRM platforms with near-zero latency and guaranteed packet delivery."
+        },
+        {
+            "id": "trustaudit-os",
+            "title": "TrustAudit OS",
+            "tag": "Governance Platform",
+            "status": "Continuous Audit",
+            "shortDesc": "Real-time compliance, license verification, automated vulnerability scoring, and auditable code telemetry dashboard for executive clarity.",
+            "fullDesc": "TrustAudit OS gives executive teams, security officers, and compliance auditors continuous, unshakeable visibility into the software supply chain. It monitors dependencies, license exposures, secret leaks, and security compliance in real time with zero fluff."
+        }
+    ],
+    "projects": [
+        {
+            "id": "project-alpha",
+            "title": "Project Alpha",
+            "domain": "LOGISTICS INFRASTRUCTURE",
+            "sprint": "Sprint 18 / 20",
+            "description": "Autonomous Logistics Dispatch Engine capable of route re-allocation under adverse supply chain shocks in sub-second timelines.",
+            "milestone": "Final Load Testing",
+            "progressPercent": 85
+        },
+        {
+            "id": "project-medconnect",
+            "title": "Project MedConnect",
+            "domain": "HEALTHCARE • COMPLIANCE",
+            "sprint": "Sprint 09 / 16",
+            "description": "HIPAA-Compliant Telehealth AI Copilot providing live practitioner ambient charting with strict zero-retention privacy fences.",
+            "milestone": "Integration Sprint",
+            "progressPercent": 60
+        },
+        {
+            "id": "project-finshield",
+            "title": "Project FinShield",
+            "domain": "FINTECH • SECURITY",
+            "sprint": "Sprint 22 / 24",
+            "description": "High-throughput real-time fraud signature detection combined with cross-institutional distributed ledger state verification.",
+            "milestone": "External Security Audit",
+            "progressPercent": 92
+        }
+    ],
+    "stories": [
+        {
+            "id": "omnilogistics",
+            "quote": "“HTIT delivered our mission-critical platform on schedule with unmatched code clarity and integrity. They never cut corners.”",
+            "author": "Elena Rostova",
+            "role": "CTO at OmniLogistics",
+            "company": "OmniLogistics Global",
+            "challenge": "OmniLogistics faced massive route inefficiencies and delayed dispatch decisions across 12 European freight corridors during geopolitical disruptions.",
+            "impact": "Reduced rerouting decision lag from 24 minutes to 850 milliseconds. Cut fuel waste by 18.4% across 4,200 active vehicles."
+        },
+        {
+            "id": "apexhealth",
+            "quote": "“Their honesty on architecture saved us $200k in unnecessary cloud overhead. They advised against shiny distractions and built pure value.”",
+            "author": "Marcus Vance",
+            "role": "VP Engineering at ApexHealth",
+            "company": "ApexHealth Systems",
+            "challenge": "An external consulting firm recommended a complex $350k multi-cluster Kubernetes deployment with 7 AI vendor dependencies that ApexHealth's team couldn't maintain.",
+            "impact": "Reduced infrastructure burn by 62% while improving patient intake chart rendering speed by 4x. Zero maintenance headaches."
+        },
+        {
+            "id": "novaretail",
+            "quote": "“True human partnership in an era of automated indifference. Working with HTIT feels like having an honest in-house team of world-class experts.”",
+            "author": "Sarah Jenkins",
+            "role": "Founder at NovaRetail",
+            "company": "NovaRetail Group",
+            "challenge": "NovaRetail needed real-time inventory synchronization across 180 brick-and-mortar storefronts and high-traffic flash-sale web traffic without inventory double-sells.",
+            "impact": "Over Black Friday weekend, handled 1.8M concurrent transactions with 0.00% inventory oversells and zero outages."
+        }
+    ],
+    "values": [
+        {
+            "number": "Pillar 01",
+            "title": "Righteousness",
+            "summary": "Purposeful engineering designed to serve humanity responsibly. We evaluate every algorithm for social equity, privacy sovereignty, and moral clarity.",
+            "detailedManifesto": "Righteous technology cannot be an afterthought. We implement mathematical safeguards that ensure automated decisions respect fundamental human dignity. We reject surveillance capitalism architectures, deceptive dark patterns, and manipulative engagement loops."
+        },
+        {
+            "number": "Pillar 02",
+            "title": "Honesty",
+            "summary": "Radical transparency across pricing, sprint velocities, real-time code commits, and project hurdles. No obfuscated jargon, no hidden line items.",
+            "detailedManifesto": "In software engineering, dishonesty shows up as hidden technical debt, padded vendor estimates, and obscured progress reports. We provide clients with raw, real-time telemetry into our git repositories, test runs, and cost structures."
+        },
+        {
+            "number": "Pillar 03",
+            "title": "Truthfulness",
+            "summary": "Objective technical advice unswayed by vendor lock-ins or hype cycles. We architect strictly what your enterprise requires to prosper.",
+            "detailedManifesto": "If a simple, robust SQL database solves your problem better than an over-engineered distributed mesh, we tell you that plainly. We refuse to chase AI fads or lock clients into proprietary vendor monopolies when open standards are superior."
+        },
+        {
+            "number": "Pillar 04",
+            "title": "Doing It Right",
+            "summary": "Exhaustive automated testing, zero brittle workarounds, clean modular documentation, and zero technical debt compromises. Built to last decades.",
+            "detailedManifesto": "Writing clean, maintainable software requires immense craft. We treat code as institutional capital. Every module is covered by rigorous end-to-end integration tests, type-safe contracts, and comprehensive architecture decision records (ADRs)."
+        }
+    ]
+}

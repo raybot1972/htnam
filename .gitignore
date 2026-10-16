@@ -1,0 +1,15 @@
+# Server-only administrator credential created during first-run CMS setup.
+config.local.php
+
+# Runtime CMS backups and uploads. Keep their protected directories tracked.
+content/backups/*
+!content/backups/.gitkeep
+images/uploads/*
+!images/uploads/.htaccess
+
+# Local tooling and operating-system files.
+.env*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
