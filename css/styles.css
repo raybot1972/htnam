@@ -99,7 +99,13 @@ h3 { font-size: 1.35rem; font-weight: 700; }
 .stack { display: flex; flex-direction: column; gap: 12px; }
 .wrap-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 
-.hero { display: grid; grid-template-columns: 1.3fr .9fr; gap: 48px; align-items: center; padding: 36px 0 20px; }
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(440px, .9fr);
+  gap: 32px;
+  align-items: start;
+  padding: 36px 0 20px;
+}
 .hero-brand-crop,
 .footer-brand-crop,
 .brand-crop {
@@ -184,6 +190,7 @@ h3 { font-size: 1.35rem; font-weight: 700; }
 
 .photo {
   position: relative;
+  align-self: start;
   background: var(--card);
   border: 1px solid rgba(0,210,255,.2);
   border-radius: 18px;
@@ -203,7 +210,7 @@ h3 { font-size: 1.35rem; font-weight: 700; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center;
   transition: transform .6s ease, filter .6s ease;
 }
 .team-person:hover img { transform: scale(1.045); filter: brightness(1.08); }

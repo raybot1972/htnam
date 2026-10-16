@@ -20,10 +20,10 @@ const HOME_CONTENT = Object.assign({
   teamSubtitle: "Finance • Visualization • Development • Architecture",
   teamStatus: "Available for Collaboration",
   teamMembers: [
-    { name: "Manny", role: "Back Office & Finance", image: "images/team/manny.jpeg" },
-    { name: "Mondo", role: "Visualization & Development", image: "images/team/mondo.jpeg" },
-    { name: "JoJo", role: "Development & Automation", image: "images/team/jojo.jpeg" },
-    { name: "Raymond", role: "Software Solutions Architect", image: "images/team/raymond.jpeg" }
+    { name: "Manny", role: "Back Office & Finance", image: "images/team/manny-studio-v2.jpg" },
+    { name: "Mondo", role: "Visualization & Development", image: "images/team/mondo-studio-v2.jpg" },
+    { name: "JoJo", role: "Development & Automation", image: "images/team/jojo-studio-v2.jpg" },
+    { name: "Raymond", role: "Software Solutions Architect", image: "images/team/raymond-studio-v2.jpg" }
   ],
   metrics: [
     { value: "100%", label: "Auditable Code" },

@@ -27,22 +27,22 @@
             {
                 "name": "Manny",
                 "role": "Back Office & Finance",
-                "image": "images/team/manny.jpeg"
+                "image": "images/team/manny-studio-v2.jpg"
             },
             {
                 "name": "Mondo",
                 "role": "Visualization & Development",
-                "image": "images/team/mondo.jpeg"
+                "image": "images/team/mondo-studio-v2.jpg"
             },
             {
                 "name": "JoJo",
                 "role": "Development & Automation",
-                "image": "images/team/jojo.jpeg"
+                "image": "images/team/jojo-studio-v2.jpg"
             },
             {
                 "name": "Raymond",
                 "role": "Software Solutions Architect",
-                "image": "images/team/raymond.jpeg"
+                "image": "images/team/raymond-studio-v2.jpg"
             }
         ],
         "metrics": [

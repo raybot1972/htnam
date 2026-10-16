@@ -37,13 +37,29 @@ function clipped(mixed $value, int $max = 5000): string
     return function_exists('mb_substr') ? mb_substr($text, 0, $max) : substr($text, 0, $max);
 }
 
+function default_team_members(): array
+{
+    return [
+        ['name' => 'Manny', 'role' => 'Back Office & Finance', 'image' => 'images/team/manny-studio-v2.jpg'],
+        ['name' => 'Mondo', 'role' => 'Visualization & Development', 'image' => 'images/team/mondo-studio-v2.jpg'],
+        ['name' => 'JoJo', 'role' => 'Development & Automation', 'image' => 'images/team/jojo-studio-v2.jpg'],
+        ['name' => 'Raymond', 'role' => 'Software Solutions Architect', 'image' => 'images/team/raymond-studio-v2.jpg'],
+    ];
+}
+
 function load_content(string $path): array
 {
     if (!is_readable($path)) {
         return [];
     }
     $content = json_decode((string) file_get_contents($path), true);
-    return is_array($content) ? $content : [];
+    if (!is_array($content)) {
+        return [];
+    }
+    if (empty($content['home']['teamMembers']) || !is_array($content['home']['teamMembers'])) {
+        $content['home']['teamMembers'] = default_team_members();
+    }
+    return $content;
 }
 
 function ensure_directory(string $path): bool
